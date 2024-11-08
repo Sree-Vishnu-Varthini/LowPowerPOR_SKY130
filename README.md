@@ -106,20 +106,24 @@ The design was simulated using the open-source SKY130 PDK, eSim and Ngspice.
 ![I(NM1)](https://github.com/user-attachments/assets/b2b97ef6-a992-4ea5-9e93-8f1d84e2e4b4)
 
 ## Open Source Tools Used
-- eSim
+### eSim
 
   - eSim (previously known as Oscad / FreeEDA) is a free/libre and open source EDA tool for circuit design, simulation, analysis and PCB design. It is an integrated tool built using free/libre and open source software such as KiCad, Ngspice and GHDL. eSim is released under GPL.
   - https://esim.fossee.in/home
   
-- Ngspice
+### Ngspice
 
   - ngspice is the open source spice simulator for electric and electronic circuits.
   - http://ngspice.sourceforge.net/
 
-- SkyWater SKY130 PDK
+### SkyWater SKY130 PDK
 
   - The SkyWater SKY130 PDK is a collaboration between Google and SkyWater Technology Foundry to provide a fully open source Process Design Kit and related resources, which can be used to create manufacturable designs at SkyWater’s facility.
   - https://github.com/google/skywater-pdk
+
+## Installation of Tools
+### Installation on Windows
+### Installation on Ubuntu
 
 ## Future Work
 - Design a variant of the circuit with more transistors (e.g., 14 or more) to support higher supply voltages while maintaining low power consumption.
