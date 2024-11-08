@@ -14,6 +14,7 @@ This repository presents an analysis and design of a low-power Power-on-Reset (P
   - [eSim](https://github.com/Sree-Vishnu-Varthini/LowPowerPOR_SKY130/#eSim)
   - [Ngspice](https://github.com/Sree-Vishnu-Varthini/LowPowerPOR_SKY130/#Ngspice)
   - [Skywater SKY130 PDK](https://github.com/Sree-Vishnu-Varthini/LowPowerPOR_SKY130/#Skywater-SKY130-PDK)
+- [Future Work](https://github.com/Sree-Vishnu-Varthini/LowPowerPOR_SKY130/#Future-Work)
 - [Contributors](https://github.com/Sree-Vishnu-Varthini/LowPowerPOR_SKY130/#Contributors)
 - [Acknowledgements](https://github.com/Sree-Vishnu-Varthini/LowPowerPOR_SKY130/#Acknowledgements)
 - [Contact Information](https://github.com/Sree-Vishnu-Varthini/LowPowerPOR_SKY130/#Contact-Information)
