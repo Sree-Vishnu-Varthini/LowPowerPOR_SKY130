@@ -1,5 +1,10 @@
 # Performance Analysis of Low-Power Power-on-Reset Circuit using SKY130 PDK Technology
-[Overview](https://github.com/Sree-Vishnu-Varthini/LowPowerPOR_SKY130/#Overview)
+- [Overview](https://github.com/Sree-Vishnu-Varthini/LowPowerPOR_SKY130/#Overview)
+- [Circuit Design](https://github.com/Sree-Vishnu-Varthini/LowPowerPOR_SKY130/#Circuit-Design)
+- [Implementation](https://github.com/Sree-Vishnu-Varthini/LowPowerPOR_SKY130/#Implementation)
+  - [Components](https://github.com/Sree-Vishnu-Varthini/LowPowerPOR_SKY130/#Components)
+- [Block Diagram of the POR Circuit](https://github.com/Sree-Vishnu-Varthini/LowPowerPOR_SKY130/#Block-Diagram-of-the-POR-Circuit)
+- [Circuit Diagram of the POR Circuit](https://github.com/Sree-Vishnu-Varthini/LowPowerPOR_SKY130/#Circuit-Diagram-of-the-POR-Circuit)
 
 ## Overview
 This repository presents an analysis and design of a low-power Power-on-Reset (POR) circuit using SKY130 PDK technology. 
