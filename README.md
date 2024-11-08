@@ -156,11 +156,29 @@ $ esim
 or you can double click on eSim icon created on Desktop after installation.
 
 #### Note:
+
 - eSim is available for Windows 8, 10, and 11 (64-bit).
 - If you face issues with eSim-2.4, try using the more stable version eSim-2.3.
 - eSim is also available for Ubuntu 18.04 and 20.04 LTS (including flavors).
 - When eSim is installed on Windows, Ngspice and the SkyWater SKY130 PDK are also installed automatically.
 - There is no need to install Ngspice or the Sky130 PDK separately on Windows as they are bundled with eSim.
+
+## Simulation of SKY130 Schematic in eSim on Windows
+
+1. Access the eSim SKY130 library by clicking on the Place Component button in the Right Toolbar and searching for the desired component in the Choose Component Dialog Box.
+2. Alternatively, use predefined IPs made in SKY130 available in the eSim SKY130 Subckts library by searching for them in the same dialog box.
+3. Ensure eSim is in SKY130 mode by selecting the SKY130mode option from the eSim SKY130 library.
+4. When in SKY130 mode, use components with designators such as ‘sc’, ‘u’, ‘x’, ‘v’, ‘i’, and ‘a’ to avoid including unnecessary technology nodes.
+5. Annotate your schematic and generate the netlist.
+6. Click on the Convert KiCad to Ngspice button in the Left Toolbar to convert the schematic to a Ngspice-compatible format.
+7. In the Analysis Tab, set all the simulation parameters and source details.
+8. In the Device Modeling Tab, select options for the SKY130 PDK. Add the Default Path of the PDK installed with eSim by clicking on Add Default Path, or click Add and browse to a different SKY130 PDK path.
+9. Add SPICE model parameters for each component in the provided text box in the Device Modeling Tab.
+10. If using a SKY130 Subcircuit IP, go to the Subcircuits Tab, click Add, browse to the SKY130 folder, select the subcircuit, and click Open to add it.
+11. Click Convert to complete the KiCad to Ngspice conversion. A dialog box will confirm the successful conversion.
+12. If needed, manually edit the netlist by clicking on the Project Name.cir.out file in the left project panel.
+13. Click the Simulate button in the Left Toolbar to run the simulation.
+14. Following these steps will interface the SKY130 PDK with eSim, allowing simulations of designs using SKY130 technology.
 
 ## Future Work
 - Design a variant of the circuit with more transistors (e.g., 14 or more) to support higher supply voltages while maintaining low power consumption.
@@ -172,6 +190,7 @@ or you can double click on eSim icon created on Desktop after installation.
 - https://esim.fossee.in/
 - https://esim.fossee.in/downloads
 - https://static.fossee.in/esim/manuals/eSim_Manual_2.4.pdf
+- https://static.fossee.in/esim/manuals/eSim_Manual_2.3.pdf
 - https://ngspice.sourceforge.io/
 - https://ngspice.sourceforge.io/docs/ngspice-42-manual.pdf
 - https://github.com/google/skywater-pdk
