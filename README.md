@@ -6,9 +6,10 @@ This repository presents an analysis and design of a low-power Power-on-Reset (P
 - [Overview](https://github.com/Sree-Vishnu-Varthini/LowPowerPOR_SKY130/#Overview)
 - [Circuit Design](https://github.com/Sree-Vishnu-Varthini/LowPowerPOR_SKY130/#Circuit-Design)
   - [Components](https://github.com/Sree-Vishnu-Varthini/LowPowerPOR_SKY130/#Components)
-- [Implementation](https://github.com/Sree-Vishnu-Varthini/LowPowerPOR_SKY130/#Implementation)
 - [Block Diagram of the POR Circuit](https://github.com/Sree-Vishnu-Varthini/LowPowerPOR_SKY130/#Block-Diagram-of-the-POR-Circuit)
 - [Circuit Diagram of the POR Circuit](https://github.com/Sree-Vishnu-Varthini/LowPowerPOR_SKY130/#Circuit-Diagram-of-the-POR-Circuit)
+- [Power-On-Reset Circuit Parameters](https://github.com/Sree-Vishnu-Varthini/LowPowerPOR_SKY130/#Power-On-Reset-Circuit-Parameters)
+- [Implementation](https://github.com/Sree-Vishnu-Varthini/LowPowerPOR_SKY130/#Implementation)
 - [Pre-Layout Performance Characteristics](https://github.com/Sree-Vishnu-Varthini/LowPowerPOR_SKY130/#Pre-Layout-Performance-Characteristics)
 - [Open Source Tools Used](https://github.com/Sree-Vishnu-Varthini/LowPowerPOR_SKY130/#Open-Source-Tools-Used)
   - [eSim](https://github.com/Sree-Vishnu-Varthini/LowPowerPOR_SKY130/#eSim)
@@ -18,6 +19,7 @@ This repository presents an analysis and design of a low-power Power-on-Reset (P
   - [Installation on Windows](https://github.com/Sree-Vishnu-Varthini/LowPowerPOR_SKY130/#Installation-on-Windows)
   - [Installation on Ubuntu](https://github.com/Sree-Vishnu-Varthini/LowPowerPOR_SKY130/#Installation-on-Ubuntu)
   - [Note](https://github.com/Sree-Vishnu-Varthini/LowPowerPOR_SKY130/#Note)
+-[Simulation of SKY130 Schematic in eSim on Windows](https://github.com/Sree-Vishnu-Varthini/LowPowerPOR_SKY130/#Simulation-of-SKY130-Schematic-in-eSim-on-Windows)
 - [Future Work](https://github.com/Sree-Vishnu-Varthini/LowPowerPOR_SKY130/#Future-Work)
 - [Resources](https://github.com/Sree-Vishnu-Varthini/LowPowerPOR_SKY130/#Resources)
 - [Contributors](https://github.com/Sree-Vishnu-Varthini/LowPowerPOR_SKY130/#Contributors)
@@ -51,6 +53,24 @@ This approach not only saves power but also improves resilience against voltage 
 ## Circuit Diagram of the POR Circuit
 
 ![Schematic](https://github.com/user-attachments/assets/d1806c98-a36b-473a-b545-c94c71728e9b)
+
+## Power-On-Reset Circuit Parameters
+
+| Parameter             | Description                                | Min    | Type    | Max    | Unit  | Condition                                        |
+|-----------------------|--------------------------------------------|--------|---------|--------|-------|--------------------------------------------------|
+| Technology            | 0.18 µm CMOS Process                      |        |         |        |       |                                                  |
+| RL                    | Load resistance at Vbgp terminal          | 100    |         |        | Mohm  | VDD=3.3V, T=27C                                  |
+| CL                    | Load capacitance at Vbgp terminal         |        |         | 50     | pF    | VDD=2.7V - 3.6V, T=-40C - 125C, RL=100M          |
+| Vbgp                  | Output Reference voltage                  | 1.2013 | 1.2056  | 1.2070 | V     | T=-40 to 140C, VDD=3.3V                         |
+| Vbgp                  | Output Reference voltage                  | 1.1698 | 1.2056  | 1.2234 | V     | VDD=2.7V to VDD=3.6V, T=27C                      |
+| TC_vbgp               | Temperature Coefficient of Vbgp           |        | 26.2663 |        | ppm/C | T=-40 to 125C, VDD=3.3V                         |
+| VC_vbgp               | Voltage Coefficient of Vbgp               |        | 5.9555  |        | %/V   | VDD=2.7V to 3.7V, T=27C                         |
+| Tstart                | Start up time                              |        | 3.3     |        | us    | VDD=3.3V, T=27C, CL=50pF                         |
+| VDD                   | Supply Voltage                             | 3.2    | 3.3     | 3.6    | V     | T=-40C to 125C                                   |
+| IDD                   | Supply Current                             |        | 22.4760 |        | uA    | EN=1                                            |
+| IDD                   | Supply Current                             |        | 95.3950 |        | pA    | EN=0                                            |
+
+
 
 ## Implementation
 This POR circuit uses a 10-transistor configuration, integrating components like current mirrors and inverters for effective low-power operation.
