@@ -123,13 +123,53 @@ The design was simulated using the open-source SKY130 PDK, eSim and Ngspice.
 
 ## Installation of Tools
 ### Installation on Windows
+1. Download the latest eSim release for Windows OS from the link: https://esim.fossee.in/downloads
+2. Locate the installer file in the folder where your downloaded files are kept.
+3. Double click on the file.
+4. If a pop-up window appears asking ”Do you want to allow the following program from an unknown publisher to make changes to this computer?”, click YES.
+5. Then in the ”License Agreement” window, select the I Agree option.
+6. Click Next when the program asks for you to "Choose Install Location". Choose the auto-selected the destination folder path.
+7. In the next window that appears, select Install.
+8. A progress bar will appear; once it reaches 100%, "Installation Complete" message will be shown at the top of the eSim setup window. Click onClose. eSim shortcut icon will be on your Desktop.
+
 ### Installation on Ubuntu
+1. Download eSim installer from http://esim.fossee.in/downloads to a local directory and unpack it.
+2. You can also unpack the installer through the terminal. Open the terminal and navigate to the directory where the installer is located. Use the following command to unpack:
+```bash
+unzip eSim-2.4.zip
+```
+2. To install eSim and other dependencies run the following command:
+```bash
+$ cd eSim-2.4
+$ chmod +x install-eSim.sh
+$ ./install-eSim.sh --install
+```
+3. To run eSim from the terminal, type:
+```bash
+$ esim
+```
+or you can double click on eSim icon created on Desktop after installation.
+
+#### Note:
+- eSim is available for Windows 8, 10, and 11 (64-bit).
+- If you face issues with eSim-2.4, try using the more stable version eSim-2.3.
+- eSim is also available for Ubuntu 18.04 and 20.04 LTS (including flavors).
+- When eSim is installed on Windows, Ngspice and the SkyWater SKY130 PDK are also installed automatically.
+- There is no need to install Ngspice or the Sky130 PDK separately on Windows as they are bundled with eSim.
 
 ## Future Work
 - Design a variant of the circuit with more transistors (e.g., 14 or more) to support higher supply voltages while maintaining low power consumption.
 - Explore the performance of the proposed circuit in smaller technology nodes to evaluate its scalability and effectiveness at lower power levels.
 - Investigate improvements in brown-out detection accuracy and power consumption.
 - Study the circuit's behavior under varying temperature conditions to ensure reliable operation in diverse environmental settings.
+
+## Resources
+- https://esim.fossee.in/
+- https://esim.fossee.in/downloads
+- https://static.fossee.in/esim/manuals/eSim_Manual_2.4.pdf
+- https://ngspice.sourceforge.io/
+- https://ngspice.sourceforge.io/docs/ngspice-42-manual.pdf
+- https://github.com/google/skywater-pdk
 
 ## Contributors
 - Sree Vishnu Varthini S, Pre-Final Year Student, Sri Eshwar College of Engineering, sreevishnuvarthini@gmail.com
